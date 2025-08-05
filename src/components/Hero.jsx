@@ -11,12 +11,12 @@ const Hero = () => {
           <div className="relative mb-8">
             <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-black dark:border-white shadow-xl">
               <img
-                src="https://i.ibb.co/3YV23NfX/your-image.jpg" // Make sure to use the direct image URL
+                src="/dvpportfolio/profile.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   e.target.onerror = null;
-                  e.target.src = 'https://via.placeholder.com/200'; // Fallback image if main image fails
+                  e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"%3E%3Crect width="200" height="200" fill="%23cccccc"/%3E%3C/svg%3E'; // Inline SVG fallback
                 }}
               />
             </div>

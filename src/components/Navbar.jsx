@@ -6,7 +6,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '/dvpportfolio' },
     { name: 'About', href: '/about' },
     { name: 'Education', href: '/education' },
     { name: 'Experience', href: '/experience' },
@@ -20,7 +20,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <Link to="/" className="text-xl font-bold text-gray-800 dark:text-white">
+            <Link to="/dvpportfolio" className="text-xl font-bold text-gray-800 dark:text-white">
               Portfolio
             </Link>
           </div>
