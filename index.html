@@ -5,6 +5,17 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DVP Portfolio</title>
+    <script>
+      (function() {
+        const redirectPath = localStorage.getItem('redirectPath');
+        if (redirectPath) {
+          localStorage.removeItem('redirectPath');
+          if (redirectPath !== '/dvpportfolio') {
+            window.history.replaceState(null, null, '/dvpportfolio' + redirectPath);
+          }
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
