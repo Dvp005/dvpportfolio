@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio - Redirecting...</title>
+    <script>
+        const path = window.location.pathname;
+        const basePath = '/dvpportfolio';
+        localStorage.setItem('redirectPath', path.replace(basePath, ''));
+        window.location.href = basePath;
+    </script>
+</head>
+<body>
+    Redirecting...
+</body>
+</html>
