@@ -5,14 +5,24 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DVP Portfolio</title>
-    <script>
+    <script type="text/javascript">
       (function() {
-        const redirectPath = localStorage.getItem('redirectPath');
-        if (redirectPath) {
-          localStorage.removeItem('redirectPath');
-          if (redirectPath !== '/dvpportfolio') {
-            window.history.replaceState(null, null, '/dvpportfolio' + redirectPath);
+        const currentPath = window.location.pathname;
+        const basePath = '/dvpportfolio';
+        
+        // Handle GitHub Pages SPA routing
+        if (currentPath.includes(basePath)) {
+          const route = currentPath.replace(basePath, '');
+          if (route === '') {
+            window.history.replaceState(null, null, basePath + '/');
           }
+        }
+
+        // Handle redirects from 404.html
+        const searchParams = new URLSearchParams(window.location.search);
+        const redirectTo = searchParams.get('p');
+        if (redirectTo) {
+          window.history.replaceState(null, null, basePath + redirectTo);
         }
       })();
     </script>
