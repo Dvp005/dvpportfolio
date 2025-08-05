@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>Portfolio - Redirecting...</title>
-    <script>
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      (function() {
         const path = window.location.pathname;
         const basePath = '/dvpportfolio';
-        localStorage.setItem('redirectPath', path.replace(basePath, ''));
-        window.location.href = basePath;
+        const relativePath = path.replace(basePath, '');
+        
+        // Redirect to index.html with the path as a query parameter
+        window.location.href = basePath + '/?p=' + encodeURIComponent(relativePath);
+      })();
     </script>
-</head>
-<body>
+  </head>
+  <body>
     Redirecting...
-</body>
+  </body>
+</html>
+  <body>
+    Redirecting...
+  </body>
 </html>
