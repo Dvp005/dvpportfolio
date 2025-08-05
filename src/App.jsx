@@ -20,7 +20,7 @@ function App() {
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <main>
             <Routes>
-              <Route path="/" element={<HomePage />} />
+              <Route path="/dvpportfolio" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/skills" element={<SkillsPage />} />
