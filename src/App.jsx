@@ -21,12 +21,12 @@ function App() {
           <main>
             <Routes>
               <Route path="/dvpportfolio" element={<HomePage />} />
-              <Route path="/dvpportfolio/about" element={<AboutPage />} />
-              <Route path="/dvpportfolio/projects" element={<ProjectsPage />} />
-              <Route path="/dvpportfolio/skills" element={<SkillsPage />} />
-              <Route path="/dvpportfolio/contact" element={<ContactPage />} />
-              <Route path="/dvpportfolio/education" element={<EducationPage />} />
-              <Route path="/dvpportfolio/experience" element={<ExperiencePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/skills" element={<SkillsPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/education" element={<EducationPage />} />
+              <Route path="/experience" element={<ExperiencePage />} />
             </Routes>
           </main>
           <WhatsAppButton />
